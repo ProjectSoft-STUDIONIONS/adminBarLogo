@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Плагин adminBarLogo",
+			"folder_exclude_patterns": [],
+			"file_exclude_patterns": []
+		}
+	],
+	"settings":  {
+		"font_size": 12,
+		"tab_size": 4
+	}
+}
