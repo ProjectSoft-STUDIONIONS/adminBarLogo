@@ -11,7 +11,6 @@
  * @internal     @modx_category Manager and Admin
  * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/adminBarLogo/noimage-logotip.png;assets/plugins/adminBarLogo/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
  * @internal     @installset base
- * @internal     @installset base
  * @internal     @disabled 0
  * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/issues
@@ -30,7 +29,6 @@
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Manager and Admin
  * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/adminBarLogo/noimage-logotip.png;assets/plugins/adminBarLogo/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
- * @internal     @installset base
  * @internal     @installset base
  * @internal     @disabled 0
  * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
