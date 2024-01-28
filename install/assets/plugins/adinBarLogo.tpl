@@ -5,7 +5,7 @@
  * Плагин вывода своего логотипа в адинистративной панели
  *
  * @category     plugin
- * @version      1.0.0
+ * @version      1.0.1
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Manager and Admin
@@ -24,7 +24,7 @@
  * Плагин вывода своего логотипа в адинистративной панели
  *
  * @category     plugin
- * @version      1.0.0
+ * @version      1.0.1
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Manager and Admin
