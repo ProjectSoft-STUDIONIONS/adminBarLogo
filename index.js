@@ -40,15 +40,10 @@ const fs = require('fs'),
  * @lastupdate   ${today}
  */`,
 	tpl = `//<?php\n${DocBlock}\n\n${DocBlock}\ninclude MODX_BASE_PATH . 'assets/plugins/${evoname}/${evoname}.plugin.php';`,
-	readmeHeader = `---
-Название: ${evoname} Evolution CMS
-
-Автор: ${author}
-
-Дата создания: 2024-01-25
-
-Дата обновления: ${today}
----`;
+	readmeHeader = `| Название |  Автор | Дата создания | Дата обновления |
+| --- | --- | --- | --- |
+| ${evoname} Evolution CMS | ${author} | 2024-01-25 | ${today} |
+`;
 
 /**
  * Сборка шаблона установки
