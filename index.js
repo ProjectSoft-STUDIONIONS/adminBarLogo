@@ -84,6 +84,7 @@ function normalize(arr){
 	}
 	return arrFile;
 }
+
 /**
  * Архивируем директории assets и install
  */
