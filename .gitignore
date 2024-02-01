@@ -4,6 +4,7 @@
 *.rar
 *.tag
 *.sublime-workspace
+*.lock-*
 node_modules
 bower_components
 
