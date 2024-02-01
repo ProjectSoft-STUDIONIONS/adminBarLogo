@@ -1,9 +1,11 @@
 const fs = require('fs'),
 	zip = new require('node-zip')(),
 	path = require('path'),
-	rmp = path.normalize(__dirname + '/install/assets'),
-	pkg = require(path.normalize(__dirname + '/package.json'));
-const version = pkg.version || "",
+	{ promisify } = require('util'),
+	readdir = promisify(fs.readdir),
+	stat = promisify(fs.stat),
+	pkg = require(path.normalize(__dirname + '/package.json')),
+	version = pkg.version || "",
 	evoname = pkg.evoname || "",
 	category = pkg.category || "Manager and Admin",
 	author = pkg.author || "",
@@ -18,7 +20,6 @@ const version = pkg.version || "",
 	})(),
 	license = pkg.license || "",
 	today = new Date().toISOString().split('T')[0],
-	installFile = path.join(__dirname, 'install', 'assets', 'plugins', evoname + '.tpl'),
 	DocBlock = `/**
  * ${evoname}
  *
@@ -48,18 +49,19 @@ const version = pkg.version || "",
 
 Дата обновления: ${today}
 ---`;
+
+/**
+ * Сборка шаблона установки
+ */
 let readme = fs.readFileSync(path.normalize(path.join(__dirname, '.readme')));
 fs.writeFileSync(path.normalize(path.join(__dirname, 'README.md')), `${readmeHeader}\n${readme}`, {encoding: 'utf8'});
-fs.writeFileSync(path.normalize(installFile), tpl, {encoding: 'utf8'});
+fs.writeFileSync(path.normalize(path.join(__dirname, 'install', 'assets', 'plugins', evoname + '.tpl')), tpl, {encoding: 'utf8'});
 zip.folder(evoname).file('LICENSE', fs.readFileSync(path.normalize(path.join(__dirname, 'LICENSE'))));
 zip.folder(evoname).file('README.md', fs.readFileSync(path.normalize(path.join(__dirname, 'README.md'))));
+
 /**
  * Сборка архива
  */
-const { promisify } = require('util');
-const readdir = promisify(fs.readdir);
-const stat = promisify(fs.stat);
-
 async function getFiles(dir) {
 	const subdirs = await readdir(dir);
 	const files = await Promise.all(subdirs.map(async (subdir) => {
@@ -86,14 +88,12 @@ function normalize(arr){
  * Архивируем директории assets и install
  */
 getFiles(path.normalize(path.join(__dirname, 'assets'))).then(async function(result){
-	let files = normalize(result);
-	files.forEach(function(a, b, c){
+	normalize(result).forEach(function(a, b, c){
 		let fl = zip.folder(`${pkg.evoname}/${a.dir}`);
 		fl.file(a.name, fs.readFileSync(path.normalize(path.join(__dirname, a.dir, a.name))));
 	});
 	getFiles(path.normalize(path.join(__dirname, 'install'))).then(async function(result){
-		let files = normalize(result);
-		files.forEach(function(a, b, c){
+		normalize(result).forEach(function(a, b, c){
 			let fl = zip.folder(`${pkg.evoname}/${a.dir}`);
 			fl.file(a.name, fs.readFileSync(path.normalize(path.join(__dirname, a.dir, a.name))));
 		});
@@ -101,6 +101,6 @@ getFiles(path.normalize(path.join(__dirname, 'assets'))).then(async function(res
 			let data = zip.generate({base64:false, compression:'DEFLATE'});
 			fs.writeFileSync(`${pkg.evoname}.zip`, data, 'binary');
 			console.log(`> SAVE ${pkg.evoname}.zip`);
-		}, 1000);
+		}, 500);
 	});
 });
