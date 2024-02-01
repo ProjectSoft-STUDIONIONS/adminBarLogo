@@ -29,7 +29,7 @@ const version = pkg.version || "",
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category ${category}
- * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/adminBarLogo/noimage-logotip.png;assets/plugins/adminBarLogo/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
+ * @internal     @properties &logotip=Логотип в Админ Панели;text;assets/plugins/${evoname}/noimage-logotip.png;assets/plugins/${evoname}/noimage-logotip.png;К логотипу будет применён ресайз до размера 140x40
  * @internal     @installset base
  * @internal     @disabled 0
  * @homepage     ${homepage}
@@ -38,7 +38,18 @@ const version = pkg.version || "",
  * @author       ${author}
  * @lastupdate   ${today}
  */`,
-	tpl = `//<?php\n${DocBlock}\n\n${DocBlock}\ninclude MODX_BASE_PATH . 'assets/plugins/adminBarLogo/adminBarLogo.plugin.php';`;
+	tpl = `//<?php\n${DocBlock}\n\n${DocBlock}\ninclude MODX_BASE_PATH . 'assets/plugins/${evoname}/${evoname}.plugin.php';`,
+	readmeHeader = `---
+Название: ${evoname} Evolution CMS
+
+Автор: ${author}
+
+Дата создания: 2024-01-25
+
+Дата обновления: ${today}
+---`;
+let readme = fs.readFileSync(path.normalize(path.join(__dirname, '.readme')));
+fs.writeFileSync(path.normalize(path.join(__dirname, 'README.md')), `${readmeHeader}\n${readme}`, {encoding: 'utf8'});
 fs.writeFileSync(path.normalize(installFile), tpl, {encoding: 'utf8'});
 
 /**
