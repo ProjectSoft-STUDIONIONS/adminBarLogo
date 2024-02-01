@@ -1,4 +1,15 @@
 # Плагин adminBarLogo для Evolution CMS
+---
+Название: adminBarLogo Evolution CMS
+
+Автор: Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
+
+Дата создания: 2024-01-25
+
+Дата обновления: 2024-02-01
+
+Комментарий: Плагин **adminBarLogo** предназначен для вывода своего логотипа компании в административной панели **Evolution CMS**.
+---
 
 Плагин **adminBarLogo** предназначен для вывода своего логотипа компании в административной панели **Evolution CMS**.
 

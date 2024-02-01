@@ -15,16 +15,18 @@ switch ($e->name) {
 			'noImage' => 'assets/plugins/adminBarLogo/noimage-logotip.png'
 		));
 
-		$out = '<style id="gbou_sosh_school">
+		$out = '<style id="adminBarLogo-style">
 @media (min-width: 1200px) {
 	body.light #mainMenu #nav #site::before,
 	body.dark #mainMenu #nav #site::before,
 	body.darkness #mainMenu #nav #site::before {
-		background: url(/' . $logotip . ') 0 50% no-repeat;
-		background-size: 9rem;
+		background-image: url(/' . $logotip . ');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
 	}
 }
-li#logo_changed {
+li#adminBarLogo {
 	display: none !important;
 }
 #mainMenu #nav > li:hover {
@@ -33,10 +35,10 @@ li#logo_changed {
 }
 </style>';
 
-		$menuparams = ['logo_changed', 'main', $out, '', '', '', '', 'main', 0, 100, ''];
+		$menuparams = ['adminBarLogo', 'main', $out, '', '', '', '', 'main', 0, 100, ''];
 		$menuparams[3] = 'javscript:;';
 		$menuparams[5] = 'return false;';
-		$params['menu']['logo_changed'] = $menuparams;
+		$params['menu']['adminBarLogo'] = $menuparams;
 
 		$modx->event->output(serialize($params['menu']));
 		break;
