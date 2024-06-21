@@ -4,10 +4,11 @@
 	"description": "Плагин adminBarLogo предназначен для вывода своего логотипа компании в административной панели Evolution CMS.",
 	"evoname": "adminBarLogo",
 	"category": "Manager and Admin",
-	"main": "index.js",
+	"main": "Gruntfile.js",
 	"scripts": {
+		"preinstall": "npm i -g less pug-cli",
 		"test": "npm i",
-		"build": "node index.js"
+		"build": "grunt -v"
 	},
 	"repository": {
 		"type": "git",
@@ -20,6 +21,10 @@
 	},
 	"homepage": "https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo#readme",
 	"dependencies": {
-		"node-zip": "^1.1.1"
+		"grunt": "latest",
+		"grunt-contrib-imagemin": "latest",
+		"grunt-contrib-pug": "latest",
+		"load-grunt-tasks": "latest",
+		"time-grunt": "latest"
 	}
 }
