@@ -1,0 +1,16 @@
+* text=auto
+
+/src export-ignore
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.env export-ignore
+/LICENSE export-ignore
+/*.sublime-* export-ignore
+/*.json export-ignore
+/*.js export-ignore
+/*.md export-ignore
+/*.zip export-ignore
+/*.inf export-ignore
+/*.ini export-ignore
+/*.ico export-ignore
