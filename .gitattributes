@@ -1,11 +1,8 @@
 * text=auto
 
 /src export-ignore
-/.github export-ignore
-/.gitattributes export-ignore
-/.gitignore export-ignore
-/.env export-ignore
 /LICENSE export-ignore
+/.* export-ignore
 /*.sublime-* export-ignore
 /*.json export-ignore
 /*.js export-ignore
