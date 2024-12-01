@@ -1,6 +1,6 @@
 | Название |  Автор | Дата создания | Дата обновления |
 | --- | --- | --- | --- |
-| adminBarLogo Evolution CMS | Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru> | 2024-01-25 | 01.12.2024 12:51:20 |
+| adminBarLogo Evolution CMS | Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru> | 2024-01-25 | 01.12.2024 12:56:31 |
 
 
 # Плагин adminBarLogo для Evolution CMS
