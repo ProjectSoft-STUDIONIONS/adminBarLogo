@@ -13,10 +13,10 @@
  * @internal     @installset base
  * @internal     @disabled 0
  * @homepage     https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo#readme
- * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/blob/main/LICENSE MIT License (MIT)
+ * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2024-12-01
+ * @lastupdate   01.12.2024 12:51:20
  */
 
 /**
@@ -33,9 +33,9 @@
  * @internal     @installset base
  * @internal     @disabled 0
  * @homepage     https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo#readme
- * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/blob/main/LICENSE MIT License (MIT)
+ * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   2024-12-01
+ * @lastupdate   01.12.2024 12:51:20
  */
 include MODX_BASE_PATH . 'assets/plugins/adminBarLogo/adminBarLogo.plugin.php';

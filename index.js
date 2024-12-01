@@ -19,7 +19,7 @@ const fs = require('fs'),
 		return arr.join('/');
 	})(),
 	license = pkg.license || "",
-	today = new Date().toISOString().split('T')[0],
+	today = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Samara' }).split(',').join(''),
 	DocBlock = `/**
  * ${evoname}
  *
