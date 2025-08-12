@@ -33,6 +33,30 @@ li#adminBarLogo {
 	background-color: rgba(255,255,255,0.07);
 	box-shadow: 0 0 1px rgba(0, 0, 0, .7);
 }
+/*
+ * Для ElementsInTree
+ */
+#treePane > .tab-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#treeMenu.is-intab {
+	display: flex !important;
+}
+#treePane .tab,
+#treeMenu.is-intab .treeButton {
+	flex: 1;
+	text-align: center;
+}
+#treeMenu.is-intab .treeButton {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+#tabDoc {
+	padding-bottom: 13px !important;
+}
 </style>';
 
 		$menuparams = ['adminBarLogo', 'main', $out, '', '', '', '', 'main', 0, 100, ''];

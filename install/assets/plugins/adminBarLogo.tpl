@@ -5,7 +5,7 @@
  * Плагин adminBarLogo предназначен для вывода своего логотипа компании в административной панели Evolution CMS.
  *
  * @category     plugin
- * @version      1.0.3
+ * @version      1.0.4
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Manager and Admin
@@ -16,7 +16,7 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   01.12.2024 12:58:17
+ * @lastupdate   12.08.2025 17:41:29
  */
 
 /**
@@ -25,7 +25,7 @@
  * Плагин adminBarLogo предназначен для вывода своего логотипа компании в административной панели Evolution CMS.
  *
  * @category     plugin
- * @version      1.0.3
+ * @version      1.0.4
  * @package      evo
  * @internal     @events OnManagerMenuPrerender
  * @internal     @modx_category Manager and Admin
@@ -36,6 +36,6 @@
  * @license      https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/LICENSE MIT License (MIT)
  * @reportissues https://github.com/ProjectSoft-STUDIONIONS/adminBarLogo/issues
  * @author       Чернышёв Андрей aka ProjectSoft <projectsoft2009@yandex.ru>
- * @lastupdate   01.12.2024 12:58:17
+ * @lastupdate   12.08.2025 17:41:29
  */
 include MODX_BASE_PATH . 'assets/plugins/adminBarLogo/adminBarLogo.plugin.php';
