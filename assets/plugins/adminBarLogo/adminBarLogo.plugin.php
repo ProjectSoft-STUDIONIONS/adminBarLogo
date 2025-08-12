@@ -40,6 +40,7 @@ li#adminBarLogo {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	padding: 0;
 }
 #treeMenu.is-intab {
 	display: flex !important;
@@ -56,6 +57,26 @@ li#adminBarLogo {
 }
 #tabDoc {
 	padding-bottom: 13px !important;
+}
+.tab-row .tab {
+	border-width: 0px;
+}
+.tab-row .tab.selected {
+	box-shadow: 0 -4px 0.3rem 0 rgba(0, 0, 0, .1);
+}
+#treePane .tab-page:has(form)::before,#treePane .tab-page:has(form)::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#treePane .tab-page form {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+#treePane .tab-page .actionButtons--eit {
+	margin: 11px 0 !important;
+	top: 0px;
 }
 </style>';
 
