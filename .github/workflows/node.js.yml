@@ -1,9 +1,9 @@
 name: Node
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "page" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "page" ]
   workflow_dispatch:
     inputs:
       Name:
