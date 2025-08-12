@@ -15,7 +15,7 @@ const fs = require('fs'),
 	licensePage = (function(){
 		let arr = homepage.split('#');
 		arr.pop();
-		arr.push('LICENSE');
+		arr.push('?tab=MIT-1-ov-file');
 		return arr.join('/');
 	})(),
 	license = pkg.license || "",
